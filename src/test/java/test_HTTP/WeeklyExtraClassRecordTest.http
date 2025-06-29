@@ -1,0 +1,45 @@
+### 보충수업 출결 기록 생성
+POST http://localhost:8080/api/weekly-extra-records
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+[
+  {
+    "studentId": 6,
+    "extraClassId": 3,
+    "weekNo": 1,
+    "reason": "",
+    "attended": true,
+    "attendedTime": "18:00:00",
+    "exitTime": "20:00:00",
+    "testScore": 0
+  }
+]
+
+### 전체 조회
+GET http://localhost:8080/api/weekly-extra-records
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### 단건 조회
+GET http://localhost:8080/api/weekly-extra-records/1
+
+### 수정
+PUT http://localhost:8080/api/weekly-extra-records/1
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "extraClassId": 2,
+  "weekNo": 12,
+  "reason": "시험 점수 미달",
+  "attended": false,
+  "attendedTime": "10:00",
+  "exitTime": "11:00",
+  "testScore": 70,
+  "createdById": 1,
+  "updatedById": 2
+}
+
+### 삭제
+DELETE http://localhost:8080/api/weekly-extra-records/1

@@ -1,0 +1,32 @@
+### 보충수업 생성
+POST http://localhost:8080/api/extra-classes
+Content-Type: application/json
+
+{
+  "academyId": 2,
+  "staffId": 2,
+  "days": "FRIDAY",
+  "startTime": "10:00",
+  "endTime": "12:00"
+}
+
+### 전체 조회
+GET http://localhost:8080/api/extra-classes
+
+### 단건 조회
+GET http://localhost:8080/api/extra-classes/1
+
+### 수정
+PUT http://localhost:8080/api/extra-classes/1
+Content-Type: application/json
+
+{
+  "academyId": 2,
+  "staffId": 2,
+  "days": "SATURDAY",
+  "startTime": "09:00",
+  "endTime": "11:30"
+}
+
+### 삭제
+DELETE http://localhost:8080/api/extra-classes/1

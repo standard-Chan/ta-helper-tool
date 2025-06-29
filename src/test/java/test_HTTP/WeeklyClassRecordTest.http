@@ -1,0 +1,41 @@
+### 주간 수업 기록 생성
+POST http://localhost:8080/api/weekly-records
+Content-Type: application/json
+{
+  "studentId": 1,
+  "classId": 1,
+  "weekNo": 12,
+  "attended": true,
+  "testScore": 85,
+  "homeworkScore": 90,
+  "note": "열심히 참여함",
+  "createdById": 2,
+  "updatedById": 2
+}
+
+### 전체 조회
+GET http://localhost:8080/api/weekly-records?class=1&week=1
+Content-Type: application/json
+Authorization: Bearer {{token}}}
+
+### 단건 조회
+GET http://localhost:8080/api/weekly-records/1
+
+### 수정
+PUT http://localhost:8080/api/weekly-records/2
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "classId": 1,
+  "weekNo": 12,
+  "attended": false,
+  "testScore": 70,
+  "homeworkScore": 80,
+  "note": "결석으로 인한 점수 하락",
+  "createdById": 1,
+  "updatedById": 2
+}
+
+### 삭제
+DELETE http://localhost:8080/api/weekly-records/3

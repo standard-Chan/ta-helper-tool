@@ -1,0 +1,32 @@
+### 수업 등록
+POST http://localhost:8080/api/classes
+Content-Type: application/json
+
+{
+  "academyId": 2,
+  "classTypeId": 1,
+  "days": "MONDAY",
+  "startTime": "15:00",
+  "endTime": "17:00"
+}
+
+### 전체 수업 목록 조회
+GET http://localhost:8080/api/classes
+
+### 특정 수업 상세 조회
+GET http://localhost:8080/api/classes/1
+
+### 수업 정보 수정
+PUT http://localhost:8080/api/classes/1
+Content-Type: application/json
+
+{
+  "academyId": 2,
+  "classTypeId": 1,
+  "days": "WEDNESDAY",
+  "startTime": "14:00",
+  "endTime": "16:00"
+}
+
+### 수업 삭제
+DELETE http://localhost:8080/api/classes/1

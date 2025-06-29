@@ -1,0 +1,27 @@
+### 생성
+POST http://localhost:8080/api/staffs
+Content-Type: application/json
+
+{
+  "name": "정석찬",
+  "userId": "tjrcks",
+  "password": "tjrcksdl",
+  "phoneNumber": "010-1111-2222",
+  "role": "ADMIN"
+}
+
+### 조회
+GET http://localhost:8080/api/staffs
+
+
+### 삭제
+DELETE http://localhost:8080/api/staffs/7
+
+
+### 수정
+PUT http://localhost:8080/api/staffs/2/role
+Content-Type: application/json
+
+{
+  "role": "ADMIN"
+}

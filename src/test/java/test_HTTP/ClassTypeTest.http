@@ -1,0 +1,20 @@
+# 데이터 저장하기
+POST http://localhost:8080/api/class-types
+Content-Type: application/json
+
+{
+  "name": "개념반",
+  "book": "개념완성",
+  "test": "매주 테스트",
+  "homework": "교재 p10~30"
+}
+
+### 데이터 가져오기
+GET http://localhost:8080/api/class-types
+Content-Type: application/json
+
+### 오류 테스트
+DELETE http://localhost:8080/api/class-types/2
+Content-Type: application/json
+
+

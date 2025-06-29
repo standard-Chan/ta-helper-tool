@@ -1,0 +1,38 @@
+### 학생 등록
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+{
+  "name": "정석찬",
+  "classId": 1,
+  "school": "숭실고등학교",
+  "parentPhoneNumber": "010-4312-5678",
+  "phoneNumber": "010-9654-5432",
+  "email": "jeong@example.com",
+  "age": 17
+}
+
+### 전체 조회
+GET http://localhost:8080/api/students
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+### 단건 조회
+GET http://localhost:8080/api/students/1
+
+### 수정
+PUT http://localhost:8080/api/students/3
+Content-Type: application/json
+
+{
+  "name": "김영희",
+  "classId": 1,
+  "school": "서울여고",
+  "parentPhoneNumber": "010-5678-1234",
+  "phoneNumber": "010-1234-5678",
+  "email": "younghee@example.com",
+  "age": 18
+}
+
+### 삭제
+DELETE http://localhost:8080/api/students/4

@@ -1,0 +1,26 @@
+### 학원 정보 저장 테스트
+POST http://localhost:8080/api/academies
+Content-Type: application/json
+
+{
+  "name": "시대인재",
+  "address": "서울특별시 강남구 학원로 1",
+  "tel": "02-1234-5678"
+}
+
+### 학원 전체 조회
+GET http://localhost:8080/api/academies
+
+### 학원 정보 수정
+PUT http://localhost:8080/api/academies/2
+Content-Type: application/json
+
+{
+  "name": "메가스터디",
+  "address": "서울특별시 노원구 학원로 2",
+  "tel": "02-9876-5432"
+}
+
+
+### 학원 정보 삭제
+DELETE http://localhost:8080/api/academies/1
